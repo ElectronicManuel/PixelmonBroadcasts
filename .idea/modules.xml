@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.PixelmonBroadcasts.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.PixelmonBroadcasts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PixelmonBroadcasts.iml" filepath="$PROJECT_DIR$/PixelmonBroadcasts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.api.iml" filepath="$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.test.iml" filepath="$PROJECT_DIR$/.idea/modules/PixelmonBroadcasts.test.iml" />
+    </modules>
+  </component>
+</project>
