@@ -11,7 +11,9 @@ import com.pixelmonmod.pixelmon.entities.pixelmon.EntityPixelmon;
 import com.pixelmonmod.pixelmon.entities.pixelmon.stats.IVStore;
 import com.pixelmonmod.pixelmon.entities.pixelmon.stats.StatsType;
 import com.pixelmonmod.pixelmon.enums.EnumGrowth;
+import com.pixelmonmod.pixelmon.enums.EnumMegaPokemon;
 import com.pixelmonmod.pixelmon.enums.EnumNature;
+import com.pixelmonmod.pixelmon.enums.forms.IEnumForm;
 import com.pixelmonmod.pixelmon.enums.forms.RegionalForms;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -350,8 +352,22 @@ public class PlaceholderMethods
                     pokemonName = "Alolan " + pokemon.getSpecies().getLocalizedName();
                 else if (pokemon.getFormEnum() == RegionalForms.GALARIAN)
                     pokemonName = "Galarian " + pokemon.getSpecies().getLocalizedName();
-                else
-                    pokemonName = pokemon.getSpecies().getLocalizedName();
+                else {
+                    boolean mega = false;
+                    try {
+                        IEnumForm form = pokemon.getFormEnum();
+                        EnumMegaPokemon megaPokemon = EnumMegaPokemon.getMega(pokemon.getSpecies());
+                        if(megaPokemon != null) {
+                            if(form.getForm() == megaPokemon.numMegaForms) mega = true;
+                        }
+                    } catch(Exception ex) {
+                    }
+                    if(mega) {
+                        pokemonName = String.format("Mega %s", pokemon.getSpecies().getLocalizedName());
+                    } else {
+                        pokemonName = pokemon.getSpecies().getLocalizedName();
+                    }
+                }
 
                 // Proceed with insertion.
                 broadcast = broadcast.replaceAll("(?i)%pokemon%", pokemonName);
