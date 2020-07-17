@@ -158,7 +158,10 @@ public interface EventData
         ULTRA_BEAST(null, "spawn.ultrabeast", "showUltraBeastSpawn"),
         SHINY_ULTRA_BEAST(null, "spawn.shinyultrabeast", "showUltraBeastSpawn", "showShinySpawn"),
         WORMHOLE(null, "spawn.wormhole", "showWormholeSpawn"),
-        BOSS(null, "spawn.boss", "showBossSpawn");
+        BOSS(null, "spawn.boss", "showBossSpawn"),
+        BOSS_RARE(null, "spawn.bossrare", "showBossRareSpawn"),
+        BOSS_LEGENDARY(null, "spawn.bosslegendary", "showBossLegendarySpawn"),
+        BOSS_ULTIMATE(null, "spawn.bossultimate", "showBossUltimateSpawn");
 
         // Set up some variables for accessing the Enum's data through.
         private String key;

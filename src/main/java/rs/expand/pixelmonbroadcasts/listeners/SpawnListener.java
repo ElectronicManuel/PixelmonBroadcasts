@@ -71,6 +71,36 @@ public class SpawnListener
                         // Send enabled broadcasts to people who should receive them.
                         iterateAndBroadcast(EventData.Spawns.BOSS,
                                 pokemonEntity, null, null, null);
+
+                        switch(pokemonEntity.getBossMode()) {
+                            case Rare:
+                                // Send a log message if we're set up to do logging for this event.
+                                logEvent(EventData.Spawns.BOSS_RARE,
+                                        worldName, location, "rare boss " + nameString);
+
+                                // Send enabled broadcasts to people who should receive them.
+                                iterateAndBroadcast(EventData.Spawns.BOSS_RARE,
+                                        pokemonEntity, null, null, null);
+                                break;
+                            case Legendary:
+                                // Send a log message if we're set up to do logging for this event.
+                                logEvent(EventData.Spawns.BOSS_LEGENDARY,
+                                        worldName, location, "legendary boss " + nameString);
+
+                                // Send enabled broadcasts to people who should receive them.
+                                iterateAndBroadcast(EventData.Spawns.BOSS_LEGENDARY,
+                                        pokemonEntity, null, null, null);
+                                break;
+                            case Ultimate:
+                                // Send a log message if we're set up to do logging for this event.
+                                logEvent(EventData.Spawns.BOSS_ULTIMATE,
+                                        worldName, location, "ultimate boss " + nameString);
+
+                                // Send enabled broadcasts to people who should receive them.
+                                iterateAndBroadcast(EventData.Spawns.BOSS_ULTIMATE,
+                                        pokemonEntity, null, null, null);
+                                break;
+                        }
                     }
                     else if (EnumSpecies.legendaries.contains(baseName))
                     {

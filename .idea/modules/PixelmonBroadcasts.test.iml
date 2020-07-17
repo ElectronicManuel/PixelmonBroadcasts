@@ -23,6 +23,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="PixelmonBroadcasts.main" />
+    <orderEntry type="module" module-name="PixelmonBroadcasts.api" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -32,8 +34,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="PixelmonBroadcasts.main" />
-    <orderEntry type="module" module-name="PixelmonBroadcasts.api" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>

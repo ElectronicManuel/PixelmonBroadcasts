@@ -189,6 +189,9 @@ public class ConfigMethods
         EventData.Spawns.ULTRA_BEAST.options = settingsConfig.getNode("ultraBeastSpawnOptions").getString();
         EventData.Spawns.WORMHOLE.options = settingsConfig.getNode("wormholeSpawnOptions").getString();
         EventData.Spawns.BOSS.options = settingsConfig.getNode("bossSpawnOptions").getString();
+        EventData.Spawns.BOSS_RARE.options = settingsConfig.getNode("bossRareSpawnOptions").getString();
+        EventData.Spawns.BOSS_LEGENDARY.options = settingsConfig.getNode("bossLegendarySpawnOptions").getString();
+        EventData.Spawns.BOSS_ULTIMATE.options = settingsConfig.getNode("bossUltimateSpawnOptions").getString();
 
         /// Victories.
         EventData.Victories.SHINY.options = settingsConfig.getNode("shinyVictoryOptions").getString();
